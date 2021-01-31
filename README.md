@@ -31,5 +31,7 @@ a)low=fare *1
 b)medium=fare*1.5
 c)high=fare*2
 
-2)
+2) eligiblity will be decided after first 5 rides
+3) actual rating will be shown from the 6th ride
+
 
