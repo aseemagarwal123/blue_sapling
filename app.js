@@ -4,6 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const appRoutes = require('./routes');
+const {student} = require('./models/student');
 
 const app = express();
 
@@ -14,6 +15,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/', async (req, res)=>{
   res.status(200).send({'message': 'service is up'});
+  // student.findOne({college:"601e833740ebed3d8526bb74"}).then((d)=>{
+  //   res.send(d)
+  // }).catch((e)=>{
+  //   res.send(e)
+  // })
 });
 
 app.use('/api', appRoutes);
